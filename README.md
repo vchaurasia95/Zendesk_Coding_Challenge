@@ -20,7 +20,7 @@ The Angular Client gets hits the node server API and renders the returned list o
  ```sh
    git clone https://github.com/vchaurasia95/Zendesk_Coding_Challenge.git
    ```
-2. [Start Node Server](https://github.com/vchaurasia95/Zendesk_Coding_Challenge/blob/master/server/README.md)
+2. [Start Node Server](https://github.com/vchaurasia95/Zendesk_Coding_Challenge/blob/master/server##readme)
 
 3. [Start Angular Client](https://github.com/vchaurasia95/Zendesk_Coding_Challenge/tree/master/ticket-viewer#readme)
 
