@@ -1,27 +1,31 @@
-# TicketViewer
+# TicketViewer-Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+Angular Project to render Tickets.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Navigate to root folder of this project and run the following commands from there.
+2. Install dependencies
+```sh
+   npm i
+   ```
+3. Start the Client.
+```sh
+   npm start
+   ```
+After following the above steps your client should be up (http://localhost:4200) and you default browser window will opened. 
 
-## Code scaffolding
+## UI Walkthrough
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. After starting the project go to the intial landing page. The tickets will appear in a tabular fashion.
+2. Each page will Contain 25 tickets per page. Use the paginator at the bottom of the table to navigate to next/previous page of the table.
+3. In order to view the ticket details, simply click the corresponding row. Details will appear as a pop-up. In order to close the dialog, just click anywhere outside the popup.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+2. To Generate coverage report run `ng test --code-coverage` the coverage report can be viewed by opening ${project-root}/coverage/index.html file in the browser.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
