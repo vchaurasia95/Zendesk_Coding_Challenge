@@ -11,7 +11,7 @@ This project has two components :
 
 The Node Server utilizses the Tickets API and gets the list of tickets along with all the details.
 
-The Angular Client gets hits the node server API and renders the returned list of tickets accordingly.
+The Angular Client hits the node server API and renders the returned list of tickets accordingly.
 
 # Getting Started
 
