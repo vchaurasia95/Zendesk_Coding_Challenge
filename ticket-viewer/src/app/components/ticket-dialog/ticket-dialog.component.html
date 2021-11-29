@@ -1,0 +1,37 @@
+<table style="width: 100%;height: 100%;">
+    <tr>
+        <th colspan="3">Subject: {{data.subject | titlecase}}</th>
+    </tr>
+    <tr>
+        <td>
+            <b>Ticket Id</b>: {{data.id}}
+        </td>
+        <td>
+            <b>Asignee Id</b>: {{data.assignee_id}}
+        </td>
+        <td>
+            <b>Group Id</b>: {{data.group_id}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Created At</b>: {{data.created_at | date:'short'}}
+        </td>
+        <td>
+            <b>Updated At</b>: {{data.updated_at | date:'short'}}
+        </td>
+        <td>
+            <b>Created Via</b>: {{data.via.channel | uppercase}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Status</b>: {{data.status | titlecase}}
+        </td>
+        <td colspan="2">
+            <b>Description</b>
+            : {{data.description | slice:0:75}}..
+        </td>
+    </tr>
+
+</table>
