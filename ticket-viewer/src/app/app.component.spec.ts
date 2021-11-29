@@ -55,6 +55,30 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should Test Constructor', () => {
+    spyOn(service, 'getTickets').and.callFake(() => {
+      return of({
+        "tickets": [],
+        "next_page": 'https://zccticket-viewer-vishal-ub.zendesk.com/api/v2/tickets.json?page=1'
+      })
+    });
+    const app = TestBed.createComponent(AppComponent).componentInstance;
+    expect(service.getTickets).toHaveBeenCalled();
+  });
+
+  it('should Test Constructor with API status == 500', () => {
+    spyOn(service, 'getTickets').and.callFake(() => {
+      return throwError({
+        "status": 500,
+        "error": {
+          "message": "Test Error"
+        }
+      });
+    });
+    const app = TestBed.createComponent(AppComponent).componentInstance;
+    expect(service.getTickets).toHaveBeenCalled();
+  });
+
   it('should test handlePageEvent when remdata > 25', () => {
     spyOn(component, 'handlePageEvent').and.callThrough();
     component.handlePageEvent({ length: 100, pageIndex: 3, pageSize: 25 });
@@ -105,10 +129,12 @@ describe('AppComponent', () => {
         }
       });
     });
+    spyOn(component,'handleError').and.callThrough();
     component.handlePageEvent({ length: 100, pageIndex: 4, pageSize: 20 });
     fixture.detectChanges();
     expect(component.handlePageEvent).toHaveBeenCalled();
     expect(service.getTickets).toHaveBeenCalled();
+    expect(component.handleError).toHaveBeenCalled();
   });
 
 });

@@ -75,7 +75,6 @@ export class AppComponent {
     const remainingDataCount = pageEvent.length - (pageEvent.pageIndex * pageEvent.pageSize);
     if (this.hasNextPage && remainingDataCount <= 25) {
       this.ticketService.getTickets(this.nextPage).subscribe((newPagedata) => {
-        console.log(newPagedata);
         this.dataSource.data = (this.dataSource.data.concat(newPagedata['tickets']));
         this.dataSource.paginator = this.paginator;
         if (newPagedata['next_page'] != null) {
