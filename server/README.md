@@ -42,3 +42,17 @@ Example: http://localhost:9000/tickets/2
 
 Description: This will get the specified ticket page if it exist else it will return appropiate error.
 
+# Changing Credentials
+
+- This Application uses Zendesk API's Token to access APIs.
+- The Credentials are stored in .env file. In order to change Credentials follow the below steps:
+1. Generate API token from the Zendesk Admin Center.
+2. Replace newely generated token in the following parameter in the .env file.
+   ```sh
+      TOKEN=OBdXM3Ixstqz4nliwnDaehcYKgNItzs3IotFecHB
+      ```
+3. Replace the sample email address with the account email address using which token was generated as below in the .env file.
+   ```sh
+      KEY=sample@email.com/token
+      ``` 
+
